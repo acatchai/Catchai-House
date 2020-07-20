@@ -1,0 +1,530 @@
+# a = b = c = 10
+# a = 11
+# print(a,b,c) # 11 10 10
+
+#print("wo\tlie\nkai")
+
+# str = 'aoshuhaijiunageyueqian'
+# print(str[2:5]) # 2<=l<5
+# print(str[:5])#<5
+# print(str[2:])#>=2
+# print(str[2::3])#步长为3
+# print(str[-2])
+# print(str[-4:-1])
+# del(str)
+# print(str)
+
+# print("C:\back\name")
+# print(r"C:\back\name")
+#
+# print('I LOVE YOU '*3)
+# print("EZking kill %d"%(20))
+
+# print(10//3)#取余
+# print(2**3)#幂
+# print(10%3)#取整
+# print((1-2j)*(2-3j))
+
+# print(0b1110)#0b开头为二进制
+# print(bin(14))#输出对应二进制
+#
+# x = complex(2,3)#生成复数
+# print(x)
+# print(chr(97))#十进制数字转ASCII码
+# print(ord('a'))#ASCII码转十进制数字
+
+# a = '我还就那个裂开来'
+# if a == '我没有裂开来':
+#     print("不对劲")
+# elif a == '我裂开来':
+#     print('不对劲')
+# elif a == '我还就那个裂开来':
+#     print('对劲了')
+# else :
+#     print('不知道对不对劲')
+
+
+# for i in range(9):
+#     if i%2 != 0 :
+#         print('%d是奇数'%(i))
+# for i in range(10,21,2):
+#     print(i)
+
+#列表的相关函数
+
+# t1 = [1,2,3,4,5]
+# t2 = ['a','b','c','d','e']
+# #t2.extend(t1) #合并列表 t1接在t2后
+# print(t2.index('b'))#返回下标
+# t2.insert(2,'nm')
+# print(t2) #插入
+# t2.pop(3)
+# print(t2) #删除指定下标处
+# t2.remove('a')
+# print(t2) #删除指定元素
+# t2.reverse()
+# print(t2) #反转
+# t2.append('wlkl')
+# print(t2) #末尾添加元素
+# t2.clear()
+# print(t2) #清空列表
+
+# l = [1,4,6,5,3,0]
+# l_c = l.copy()
+# l.sort()
+# print(l)
+# l_w = ['O','A','C','D','F','E']
+# l_w.sort(reverse = True)
+# print(l_w)
+# print(l_c)
+# print(sorted(l_c)) #不改变原列表 排序
+# print(l_c)
+
+# t = [1,1,1,3,4,6,5,7]
+# print(t.count(1))#输出列表中1的个数
+
+
+
+# 元组
+# test1 = (1)
+# print(type(test1)) #  int类型
+# test2 = (2,)
+# print(type(test2))# +,时 元组类型
+#
+# name, age = 'Tom', 19
+# print(name,age)
+#
+# test3 = (1,'c','a','a','f',2,3,3)
+# test4 = (1,3,6,5,4,2,7,9,8)
+# print(test3.count('a')) #统计元素个数
+# print(test3.index(3)) #返回指定元素下标
+# print(len(test3)) #返回元组内元素个数
+# print(max(test4)) #返回元组最大值
+# print(min(test4)) #返回元组最小值
+# print(sum(test4)) #元组求和
+#
+# t = [1,2,3,4,5]
+# test5 = tuple(t)
+# print(type(test5))#列表转元组
+#
+# test6 = list(test5)
+# print(type(test6)) #元组转列表
+
+
+
+#字典及相关操作
+
+# dict1 = {'Tom' : 19, 'Jack' : '20'}
+# dict1['Marry'] = 21
+# print(dict1) # 通过赋值增加元素
+# dict1.setdefault('Anna', '18') #用setdefault增加元素
+# print(dict1)
+# print(dict1.setdefault('Tom', 32)) #当使用setdefault函数 键已存在是输出其对应的值
+# print(dict1['Anna']) #字典名+[]查找
+# print(dict1.get('Marry')) #get方式查找
+# dict1['Tom'] = 10
+# print(dict1) #利用赋值的方法 修改对应的值
+# dict1_add = {'Tom' : 12, 'Jone' : 32}
+# dict1.update(dict1_add)
+# print(dict1) # 用update函数 将一个新字典更新至旧字典
+# del(dict1['Jack'])
+# print(dict1) # del函数删除对应元素
+#
+# data1 = dict1.pop('Anna')#删除对应元素并返回对应值
+# print(data1,dict1)
+#
+# data2 = dict1.popitem()
+# print(data2,dict1) # 随机返回一个键值对元组
+
+# dict3 = {'Tom' : 2,'Jim' : 5,'Mike' : 8, 'Jack' : 12}
+# for i in dict3.items():
+#     print(i) #用.item()遍历元组中所有键值对
+# for i in dict3:
+#     print(i) #用字典变量循环遍历键
+# for i in dict3.keys():
+#     print(i) #用keys()获取键
+# for i in dict3:
+#     print(dict3[i]) #通过键遍历值
+# for i in dict3.values():
+#     print(i) #通过.values()遍历值
+# dict4 = dict3.copy() #字典的复制
+# dict3.clear() #清空字典
+# print(dict4)
+# dict5 = {}.fromkeys(['Tom','Jack','Jone'])
+# print(dict5)
+
+# 函数
+# def factor_no_para(): #无参函数
+#     i = 1
+#     nums = 100
+#     print('%d的因数是:'%(nums))
+#     while i <=nums:
+#         if nums%i == 0:
+#             print(i)
+#         i += 1
+# factor_no_para()
+
+# def find_factor(nums): #带参数函数
+#     i = 1
+#     str1 = ""
+#     print('%d的因数是:'%(nums))
+#     while i <= nums:
+#         if nums%i == 0:
+#             str1 = str1 + ' ' + str(i)
+#         i += 1
+#     print(str1)
+# find_factor(200)
+
+# import test_function
+# print(test_function.find_factor_re(300))
+# print(test_function.find_factor_re('a'))
+# print(test_function.find_factor_re(-2))
+# help(test_function.find_factor_re) #导入模块
+#
+# from test_function import find_factor_re
+# print(find_factor_re(200))
+
+# from test_function import *
+# print(find_factor_re(10000)) #导入指定函数 import * 可用于导入全部函数
+
+#位置参数
+# def test1(name,age):
+#     print('姓名：%s,年龄：%d'%(name,age))
+# test1('Jhon',18)
+# test1(age= 18,name='Mary')
+# test1('Jone',age=18) #关键参数
+#
+# def test2(name,age = 22 ): #带默认值
+#     print('姓名：%s,年龄：%d'%(name,age))
+# test2('William')
+#
+# def test3(name,*attribute):#传递任意数量的参数
+#     print(name)
+#     print(type(attribute))
+#     description = ''
+#     for get_t in attribute:
+#         description+=' '+get_t
+#     print(description)
+# test3('西瓜','五毛','甜','圆型')
+#
+# def test4(name,**attribute): #传递任意数量键值对
+#     print(name)
+#     print(type(attribute))
+#     return attribute
+# print(test4('Bear',taste='甜',shape='圆型',price = 12 ))
+
+
+# a = lambda x,y:x**y #匿名函数
+# print(a(3,2),a(2,4))
+#
+# def recursion_sum(num): #递归
+#     if num == 1:
+#         return num
+#     tt = recursion_sum(num-1) + num
+#     print(id(tt))
+#     return tt
+# print(recursion_sum(10))
+
+#二分法查找
+# def r_dichotomy(nums,find,left,right):
+#     '''
+#   用于二分法查找
+#     :param nums:
+#     :param find:
+#     :param left:
+#     :param right:
+#     :return:
+#     '''
+#     middle = (left+right)//2
+#     if nums[middle] == find:
+#         return middle
+#     if right == left + 1:
+#         if nums[middle] != find:
+#             return -1
+#     if nums[middle] > find:
+#         return r_dichotomy(nums,find,left,middle)
+#     if nums[middle] < find:
+#         return r_dichotomy(nums,find,middle+1,right)
+# nums = [1,3,5,7,11,56,59,133,464]
+# print(len(nums))
+# print(r_dichotomy(nums,59,0,len(nums)))
+
+#类
+# class Box1(): #统一约定类名首字母大写
+#     '''求立方体的类'''
+#     def __init__(self,length1,width1,height1): #传递类参数的保留函数
+#         self.length = length1
+#         self.width = width1
+#         self.height = height1
+#     def volume(self):
+#         return self.height*self.length*self.width
+#     def setNewLength(self,length1):
+#         self.length = length1
+#
+# my_box1 = Box1(2,3,4)
+# print(my_box1.volume())
+#
+# print(my_box1.length)
+# my_box1.length = 20 #直接对属性值进行修改
+# print(my_box1.length,my_box1.volume())
+#
+# my_box1.setNewLength(22)#通过方法对属性值修改
+# print(my_box1.length,my_box1.volume())
+#
+# class Color1():
+#     def __init__(self,index = 0):
+#         self.set_color = ['white','red','black','green']
+#         self.index = index
+#     def setColor(self):
+#         return self.set_color[self.index]
+#
+# class Box2(): #统一约定类名首字母大写
+#     '''求立方体的类'''
+#     def __init__(self,length1,width1,height1,c1 = 0): #传递类参数的保留函数
+#         self.length = length1
+#         self.width = width1
+#         self.height = height1
+#         self.color = Color1(c1).setColor() #把类赋给属性
+#     def volume(self):
+#         return self.height*self.length*self.width
+#
+# my_box2 = Box2(10,10,10,2)
+# print(my_box2.volume(),my_box2.color)
+
+# class Box1(): #统一约定类名首字母大写
+#     '''求立方体的类'''
+#     def __init__(self,length1,width1,height1): #传递类参数的保留函数
+#         self.length = length1
+#         self.width = width1
+#         self.height = height1
+#     def volume(self):
+#         return self.height*self.length*self.width
+# class Box2(Box1):
+#     def __init__(self,length1,width1,height1):
+#         super().__init__(length1,width1,height1)
+#         self.color = 'white'
+#         self.material = 'paper'
+#         self.type = 'fish'
+#     def area(self):
+#         re = self.length*self.width+self.length*self.height+self.width*self.height
+#         return 2*re
+#
+# my_box2 = Box2(2,2,3)
+# print(my_box2.volume())
+# print(my_box2.area())
+# print('颜色：%s,材质：%s,类型：%s'%(my_box2.color,my_box2.material,my_box2.type))
+
+# class TeatPrivate():
+#     def __init__(self):
+#         self.__say = 'ok' # 变量私有化
+#     def p(self):
+#         print(self.__say)
+#     def __p1(self):
+#         print(self.__say)
+# show = TeatPrivate()
+# show.p()
+# # show.__p() 函数私有化 通过在名字前加双下划线
+#
+# from Module_Class import * # 建立独立类模块
+# my_box =Box2(10,10,10)
+# print(my_box.volume())
+
+# class StaticC(): #静态类 不能被实例化
+#     name = 'Tom'
+#     age = 20
+#     address = 'China'
+#     call = 28380000
+#     @staticmethod
+#     def a():
+#         i = 0
+#         i += 1
+#         print('第一个函数%d'%(i))
+#     def b(add = 1):
+#         print('第二个函数%d'%add)
+#     def c(add = 1):
+#         print('第三个函数%d'%add)
+#         return add
+# s1 = StaticC()
+# s1.a() #静态类 不能被实例化
+
+#datatime 模块
+# from datetime import datetime,date,time
+# print(datetime.now()) #2020-07-16 08:54:44.542397
+# today = datetime.now() #返回当前日期和时间 datetime类型
+# print(datetime.date(today)) #2020-07-16 返回当天的日期 date类型
+# print(datetime.time(today)) #08:54:44.542397 返回当天的时间 time类型
+# print(datetime.ctime(today)) # Thu Jul 16 08:54:44 2020 星期 日 月 时 分 秒 年
+# print(datetime.utcnow()) # 2020-07-16 00:59:48.264402 返回当前的utc时间
+# print(datetime.timestamp(today))# 1594861504.209869 返回当天时间戳
+# print(datetime.fromtimestamp(1594861504.209869)) #根据时间戳 返回datetime类型
+
+#math 模块
+# import math
+# print(math.trunc(3.9))# 浮点数求整
+# print(math.ceil(3.9))# 对浮点数取最大整数
+# print(round(5.4))
+# print(round(5.6))# 四舍五入
+# t_nums = (1,2,3,4)
+# print(math.fsum(t_nums))# 对元组里每个元素求和 无论整型还是浮点型均返回浮点型
+#
+# print(sum(t_nums))
+# t1 = (1.2,2.2,3.1)
+# print(sum(t1)) # sum 整型元素返回整型 浮点型返回浮点型
+#
+# height = -6
+# print(math.fabs(height))  # 返回绝对值 浮点型
+# print(abs(height))  # 返回绝对值 浮点数返回浮点型 整数返回整型
+
+# import random
+# print(random.random())  # 生成一个基于[0.0,1.0]之间的浮点数
+# print(random.uniform(1,99))  # 在指定范围获取随机数N a<=N<=b
+
+# import os
+# print(os.environ) # 获取操作系统里的环境变量
+# print(os.getcwd()) # 返回当前工作路径
+
+
+# def print_D(dic):
+# #     i = 0
+# #     try:
+# #         len1 =len(dic)
+# #         while i < len1:
+# #             print(dic.popitem())
+# #             i += 1
+# #     except:
+# #         print('传递值类型出错，必须为字典型！')
+# #
+# # print_D({'w':2,
+# #          'l':3,
+# #          'e':4})
+# #
+# # print_D('w') # 传递值类型出错，必须为字典型！
+
+#带finally 子句的异常处理
+# try:
+#     a = 1/0
+# except:
+#     print("除数不能为0")
+# finally:
+#     print("程序已结束")
+#
+
+#捕捉特定异常信息
+# try:
+#     import random
+#     i += 1
+# except ModuleNotFoundError:
+#     print("没有这个库哟")
+# except NameError:
+#     print("没有这个变量哟")
+
+#raise  #抛出异常
+# i = 'l'
+# if type(i) != int:
+#     raise TypeError('i 类型出错！')
+
+#文本文件
+# try:
+#     newfile  = r'C:\\Users\\10592\\Desktop\\python_study.txt'
+#     s_new_file = open(newfile,'w')
+#     s_new_file.close()
+#     print('成功建立文件')
+# except:
+#     print('文档建立失败')
+
+# newfile  = r'C:\\Users\\10592\\Desktop\\python_study.txt'
+# s_new_file = open(newfile,'w') #写入
+# s_new_file.write('I like python')
+# s_new_file.close()
+# s_new_file = open(newfile,'r') #读
+# print(s_new_file.read())
+# s_new_file.close()
+
+# newfile  = r'C:\\Users\\10592\\Desktop\\python_study.txt'
+# s_new_file = open(newfile,'r+')
+# print(s_new_file.read())
+# s_new_file.write('我没裂开了')
+
+#一次写入多行
+# nums = ['one','two','three','four','five']
+# newfile  = r'C:\\Users\\10592\\Desktop\\python_study.txt'
+# s_newfile = open(newfile,'w')
+# for num in nums:
+#     s_newfile.write(num+'\n')
+# s_newfile.close()
+#
+# s_newfile = open(newfile,'r')
+# # print(s_newfile.read())
+# dd = 1
+# while dd: #逐行读取
+#     dd = s_newfile.readline()
+#     print(dd)
+# s_newfile.close()
+#
+# Line_file = open(newfile,'r')
+# print(Line_file.readlines()) #以列表方式读取多行
+
+#
+# nums = ['one','two','three','four','five']
+# newfile  = r'C:\\Users\\10592\\Desktop\\python_study.txt'
+# s_newfile = open(newfile,'w')
+# for num in nums:
+#     s_newfile.write(num+'\n')
+# s_newfile.close()
+#
+# t1 = open(newfile,'r')
+# print(t1.readline(2)) # on
+# print(t1.readline()) # e
+# print(t1.read(4)) # two
+# print(t1.read(4)) #thre  后一个读取动作在前一个动作之后继续
+# print(t1.tell()) # tell()返回当前文件可以读写的位置
+# print(t1.read(1))
+# print(t1.tell())
+# t1.seek(17)#指定当前位置为17
+# print(t1.read(4))
+#
+# newfile2 = "C:\\Users\\10592\\Desktop\\python_study2.txt"
+# with open(newfile2,'w') as f:
+#     for num in nums:
+#         f.write(num + '\n')
+#     f.seek(17)
+#     f.write('nof')#在指定位置写内容
+
+
+
+#文件与路径
+# import os
+# print(os.path.abspath(os.path.curdir))#返回当前文件的绝对路径
+#
+# print(os.path.exists(r'C:\Users\10592\Desktop\python_study.txt')) #判断指定路径下是否存在文件
+# print(os.path.isfile(r'C:\Users\10592\Desktop\python_study2.txt')) #同上
+# print(os.path.isdir(r'C:\Users\10592\Desktop')) #判断路径是否存在
+# print(os.path.exists(r'C:\Users\10592\Desktop')) #同上
+# os.makedirs(r'C:\Users\10592\Desktop\python测试文件夹')
+
+#动态指定路径下建立文件夹
+import os
+import sys
+get_cur_path = os.path.abspath(os.path.curdir)
+f_n = get_cur_path + '\\files'
+try:
+    if not os.path.isdir(f_n):
+        os.makedirs(f_n)
+except:
+    print('子文件夹%s建立出错！'%f_n)
+    sys.exit()                      #动态建立文件夹
+f_n = f_n + '\\t3.txt'
+flag = False
+try:
+    f = open(f_n,'w')
+    print(f.write('OK'))
+    flag =True
+    print('文件%s写入正常！'%f_n)
+except:
+    print('打开%s文件出错，请检查！'%f_n)
+finally:
+    if flag:
+        f.close()
+        print('文件关闭。')
+    else:
+        print('程序错误,关闭。')
